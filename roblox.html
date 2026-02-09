@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DeltaScriptHub.gg - Scripts para Delta Executor Roblox | 2026</title>
+  <meta name="description" content="Baixe scripts premium e grátis para Roblox otimizados para Delta Executor. Compatíveis com Byfron bypass, atualizações diárias."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+ 
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --dark: #111118;
+      --neon-green: #22c55e;
+      --neon-blue: #3b82f6;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --card: #1a1a24;
+      --border: #2d2d3d;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+    h1, h2, h3 { font-family: 'Orbitron', sans-serif; }
+    a { color: var(--neon-green); text-decoration: none; }
+    a:hover { color: var(--neon-blue); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    header {
+      background: linear-gradient(to bottom, rgba(10,10,15,0.9), transparent);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-links a {
+      margin-left: 30px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .hero {
+      padding: 180px 0 140px;
+      text-align: center;
+      background: radial-gradient(circle at 30% 20%, rgba(34,197,94,0.08), transparent 40%);
+    }
+    .hero h1 {
+      font-size: 3.8rem;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 16px 40px;
+      background: linear-gradient(45deg, var(--neon-green), var(--neon-blue));
+      color: white;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s;
+      box-shadow: 0 0 30px rgba(34,197,94,0.4);
+      margin: 10px;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(34,197,94,0.5);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--neon-green);
+      color: var(--neon-green);
+    }
+    .btn-outline:hover {
+      background: var(--neon-green);
+      color: white;
+    }
+    section { padding: 100px 0; }
+    h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 60px;
+      background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.4s;
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--neon-green);
+      box-shadow: 0 0 40px rgba(34,197,94,0.15);
+    }
+    .feature-card h3 { font-size: 1.6rem; margin: 20px 0 15px; }
+    .feature-card p { color: var(--text-muted); }
+    .scripts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+    }
+    .script-card {
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+    .script-card:hover { transform: scale(1.03); border-color: var(--neon-blue); }
+    .script-img {
+      height: 220px;
+      background: #1e1e2e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+    }
+    .script-info { padding: 25px; }
+    .compatibility { font-size: 1.1rem; color: var(--neon-green); margin: 15px 0; }
+    .tags { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+    .tag {
+      background: rgba(34,197,94,0.15);
+      color: var(--neon-green);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+    }
+    .testimonials {
+      background: var(--dark);
+      text-align: center;
+    }
+    .testimonial {
+      max-width: 600px;
+      margin: 0 auto 50px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+    .author { color: var(--neon-blue); font-weight: 600; margin-top: 15px; }
+    .faq details {
+      background: var(--card);
+      margin-bottom: 15px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    summary {
+      padding: 20px 30px;
+      cursor: pointer;
+      font-weight: 600;
+      background: linear-gradient(to right, rgba(34,197,94,0.05), transparent);
+    }
+    .faq p { padding: 0 30px 25px; color: var(--text-muted); }
+    footer {
+      background: var(--dark);
+      text-align: center;
+      padding: 60px 20px 30px;
+      border-top: 1px solid var(--border);
+    }
+    footer small { color: var(--text-muted); margin-top: 30px; display: block; }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.8rem; }
+      nav { flex-direction: column; gap: 15px; }
+      .nav-links a { margin: 0 15px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">DeltaScriptHub.gg</div>
+        <div class="nav-links">
+          <a href="#features">Por Que Usar</a>
+          <a href="#scripts">Scripts</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://discord.gg/seuinvite" target="_blank">Discord</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Scripts para Download<br>Otimizados para Delta Executor</h1>
+      <p>Baixe scripts grátis e premium para Roblox, 100% compatíveis com Delta. Bypass Byfron 2026, auto-farm, GUIs avançadas e atualizações constantes.</p>
+      <a href="#scripts" class="btn">Baixar Scripts Agora</a>
+      <a href="https://link-center.net/3397572/AbLwXcQD5Sca" target="_blank" class="btn btn-outline">Baixar Delta Executor</a>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <h2>Por Que DeltaScriptHub</h2>
+      <div class="features">
+        <div class="feature-card">
+          <h3>Compatibilidade Delta</h3>
+          <p>Todos scripts testados no Delta Executor v2.707+ (fevereiro 2026). Funciona perfeito em mobile e PC.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Downloads Grátis</h3>
+          <p>Baixe direto sem key ou pagamento. Atualizações lifetime via Discord.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Segurança Avançada</h3>
+          <p>Obfuscation level 8+, anti-detection e suporte para executores como Delta, Solara e Wave.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="scripts" style="background:#0d0d14;">
+    <div class="container">
+      <h2>Scripts Disponíveis para Download</h2>
+      <div class="scripts-grid">
+
+        <!-- Primeira linha de scripts (original) -->
+        <div class="script-card">
+          <div class="script-img"> ZynHub Hub v4</div>
+          <div class="script-info">
+            <h3>ZynHub Hub v4</h3>
+            <div class="tags">
+              <span class="tag">Blox Fruits</span>
+              <span class="tag">Auto Farm</span>
+              <span class="tag">Keyless</span>
+            </div>
+            <div class="compatibility">Compatível com Delta Mobile/PC</div>
+            <a href="https://linkvertise.com/3397572/XkB5AFy9QKsk?o=sharing/script-bloxfruits.lua" target="_blank" class="btn">Baixar Grátis</a>
+          </div>
+        </div>
+
+        <div class="script-card">
+          <div class="script-img">Cookie hub v3</div>
+          <div class="script-info">
+            <h3>Cookie hub v3</h3>
+            <div class="tags">
+              <span class="tag">Blox fruit</span>
+              <span class="tag">Auto Farm</span>
+              <span class="tag">Anti-Ban</span>
+            </div>
+            <div class="compatibility">Otimizado para Delta 2026</div>
+            <a href="https://linkvertise.com/3397572/a2TUDOAoYcVF?o=sharing/script-universal.lua" target="_blank" class="btn">Baixar Grátis</a>
+          </div>
+        </div>
+
+        <div class="script-card">
+          <div class="script-img">EgoLoaderMain hub v4</div>
+          <div class="script-info">
+            <h3>EgoLoaderMain hub v4</h3>
+            <div class="tags">
+              <span class="tag">Blox fruit </span>
+              <span class="tag">Auto farm/Auto chest</span>
+              <span class="tag">Anti-Ban</span>
+            </div>
+            <div class="compatibility">Perfeito no Delta Android/iOS</div>
+            <a href="https://linkvertise.com/3397572/eg5DMADPKm8D?o=sharing/script-fisch.lua" target="_blank" class="btn">Baixar Grátis</a>
+          </div>
+        </div>
+
+        <!-- Segunda linha de scripts (duplicada) -->
+        <div class="script-card">
+          <div class="script-img">Screenshot Delta Blox Fruits Hub v4</div>
+          <div class="script-info">
+            <h3>Delta Blox Fruits Hub v4</h3>
+            <div class="tags">
+              <span class="tag">Blox Fruits</span>
+              <span class="tag">Auto Farm</span>
+              <span class="tag">Keyless</span>
+            </div>
+            <div class="compatibility">Compatível com Delta Mobile/PC</div>
+            <a href="https://seulinkdedownload.com/script-bloxfruits.lua" target="_blank" class="btn">Baixar Grátis</a>
+          </div>
+        </div>
+
+        <div class="script-card">
+          <div class="script-img">Screenshot Delta Universal Fly v3</div>
+          <div class="script-info">
+            <h3>Delta Universal Fly v3</h3>
+            <div class="tags">
+              <span class="tag">Universal</span>
+              <span class="tag">Fly / Speed</span>
+              <span class="tag">Anti-Ban</span>
+            </div>
+            <div class="compatibility">Otimizado para Delta 2026</div>
+            <a href="https://seulinkdedownload.com/script-universal.lua" target="_blank" class="btn">Baixar Grátis</a>
+          </div>
+        </div>
+
+        <div class="script-card">
+          <div class="script-img">Screenshot Delta Fisch Auto v2</div>
+          <div class="script-info">
+            <h3>Delta Fisch Auto v2</h3>
+            <div class="tags">
+              <span class="tag">Fisch</span>
+              <span class="tag">Auto Fish</span>
+              <span class="tag">Inf Money</span>
+            </div>
+            <div class="compatibility">Perfeito no Delta Android/iOS</div>
+            <a href="https://seulinkdedownload.com/script-fisch.lua" target="_blank" class="btn">Baixar Grátis</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <h2>O Que Usuários Dizem</h2>
+      <div class="testimonial">
+        <p>"Scripts rodam liso no Delta Mobile, farmou horas sem crash. Melhor hub grátis que achei."</p>
+        <div class="author">— DeltaUserBR</div>
+      </div>
+      <div class="testimonial">
+        <p>"Compatibilidade perfeita com Delta PC. Atualizações rápidas pós-patch Roblox."</p>
+        <div class="author">— ScriptHunter99</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2>Perguntas Frequentes</h2>
+      <div class="faq">
+        <details>
+          <summary>Como usar os scripts no Delta?</summary>
+          <p>Baixe o script (.lua), abra Delta Executor, cole o código na aba de execução e injete. Testado em v2.707 (2026).</p>
+        </details>
+        <details>
+          <summary>Os scripts são seguros?</summary>
+          <p>Sim, com obfuscation avançada contra Byfron. Mas use por conta própria – Roblox pode banir por exploits.</p>
+        </details>
+        <details>
+          <summary>Preciso de key para Delta?</summary>
+          <p>Algumas versões de Delta são keyless. Baixe a latest no site oficial e teste nossos scripts.</p>
+        </details>
+        <details>
+          <summary>Posso pedir scripts custom?</summary>
+          <p>Sim! Junte-se ao Discord e solicite no canal de requests. Atualizamos semanalmente.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>DeltaScriptHub.gg © 2026 — Scripts para uso educacional/pessoal. Não responsabilizamos por bans na Roblox.</p>
+      <small>Atualizado em: 08 de Fevereiro de 2026</small>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll para links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
